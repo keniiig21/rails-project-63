@@ -7,7 +7,8 @@ class TestHexletCode < Minitest::Test
     refute_nil ::HexletCode::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_tag_build
+    assert_equal('<img src="path/to/image">', HexletCode::Tag.build('img', src: 'path/to/image'))
+    assert_equal('<label for="email">Email</label>', HexletCode::Tag.build('label', for: 'email') { 'Email' })
   end
 end
