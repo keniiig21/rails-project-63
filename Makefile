@@ -1,3 +1,5 @@
+setup: install
+
 install:
 	bundle install
 
@@ -6,3 +8,5 @@ lint:
 
 test:
 	rake test
+
+.PHONY: test
