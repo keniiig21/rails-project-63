@@ -2,12 +2,21 @@ PATH
   remote: .
   specs:
     hexlet_code (0.1.0)
+      activesupport (>= 7.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (7.0.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
     ast (2.4.2)
+    concurrent-ruby (1.1.10)
     docile (1.4.0)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
     json (2.6.2)
     minitest (5.16.3)
     parallel (1.22.1)
@@ -40,12 +49,15 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
     unicode-display_width (2.3.0)
 
 PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  activesupport
   hexlet_code!
   minitest (~> 5.0)
   rake (~> 13.0)

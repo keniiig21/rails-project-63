@@ -23,7 +23,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To start using HexletCode you just have to use the helper it provides:
+
+```
+<%= Hexlet.form_for @user do |f| %>
+  <%= f.input :name %>
+  <%= f.input :job, as: :text %>
+<% end %>
+```
 
 ## Development
 
