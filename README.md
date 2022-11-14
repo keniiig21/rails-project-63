@@ -29,6 +29,7 @@ To start using HexletCode you just have to use the helper it provides:
 <%= Hexlet.form_for @user do |f| %>
   <%= f.input :name %>
   <%= f.input :job, as: :text %>
+  <%= f.submit 'Сохранить' %>
 <% end %>
 ```
 
