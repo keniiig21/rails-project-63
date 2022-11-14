@@ -15,6 +15,7 @@ module HexletCode
 
       opts = { name: field, type: 'text', value: @user.public_send(field) }
       opts.merge!(options)
+      @result << HexletCode::Tag.build('label', for: field) { opts.delete(:label) }
       @result << HexletCode::Tag.build('input', opts)
       @result.join
     end
@@ -25,6 +26,11 @@ module HexletCode
       options[:rows] ||= 40
       opts.merge!(options)
       @result << HexletCode::Tag.build('textarea', opts) { @user.public_send(field) }
+      @result.join
+    end
+
+    def submit(value = 'Save')
+      @result << HexletCode::Tag.build('input', type: 'submit', value:)
       @result.join
     end
   end
