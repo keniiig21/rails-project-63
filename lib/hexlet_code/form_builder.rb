@@ -25,6 +25,7 @@ module HexletCode
       options[:cols] ||= 20
       options[:rows] ||= 40
       opts.merge!(options)
+      @result << HexletCode::Tag.build('label', for: field) { opts.delete(:label) }
       @result << HexletCode::Tag.build('textarea', opts) { @user.public_send(field) }
       @result.join
     end

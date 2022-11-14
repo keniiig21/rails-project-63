@@ -26,13 +26,14 @@ class TestHexletCode < Minitest::Test
   def test_form_for_with_block
     real_res = HexletCode.form_for(@user, url: '/users') do |f|
       f.input :name, class: 'user-input', label: 'First name'
-      f.input :job, as: :text
+      f.input :job, as: :text, label: 'Job'
       f.submit 'Сохранить'
     end
     expected_res = [
       '<form action="/users" method="post">',
       '<label for="name">First name</label>',
       '<input name="name" type="text" value="rob" class="user-input">',
+      '<label for="job">Job</label>',
       '<textarea name="job" cols="20" rows="40">Some job</textarea>',
       '<input type="submit" value="Сохранить">',
       '</form>'
